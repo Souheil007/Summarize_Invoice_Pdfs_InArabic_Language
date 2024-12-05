@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdf extracor and generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/dropzone.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+    <style>
+        #resultHolder, #divClassTable {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four columns */
+            gap: 10px; /* Gap between items */
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+ 
+</head>
+
+<body>
+    <nav >
+        <a class="navbar-brand">Pdf extracor and generator</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="/file-upload" class="dropzone" id="dropzone">
+                    <div class="dz-message needsclick">
+                    
+                        <span class="note needsclick">Drop files here or click to upload</span>
+                    </div>
+                </form>
+                <div>
+                    <div >
+                        <button id="submitBtn" type="button" class="btn btn-success">Extract and Generate</button>
+                    </div>
+            
+                </div>
+            </div>
+
+            <div class="col-sm-12 error" id="error">
+                <p>There is an Error</p>
+            </div>
+
+            <div class="col-sm-12" id="resultHolder">
+            </div>
+            <div id="divClassTable"></div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', path='js/dropzone.min.js') }}"></script>
+    <script src="{{ url_for('static', path='js/app.js') }}"></script>
+</body>
+
+</html>

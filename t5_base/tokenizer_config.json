@@ -1,0 +1,1 @@
+{"eos_token": "</s>", "unk_token": "<unk>", "pad_token": "<pad>", "extra_ids": 0, "additional_special_tokens": null, "special_tokens_map_file": "/tmp/AraT5_cache_dir/3b52be683fa2fd36463d04d51871966137133d8c4fc7663ff2a20cb4f3549c18.b02fba13e4584f40329b20be0bad88c2ef97b5fda7d9f4f69b1cb3a620568a86", "name_or_path": "UBC-NLP/AraT5-base"}

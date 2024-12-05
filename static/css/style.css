@@ -1,0 +1,70 @@
+
+
+.dropzone {
+  border-style: dashed;
+}
+
+
+.error {
+  font-family: MerriweatherRegular;
+  font-size: 30px;
+  line-height: initial;
+  color: blue;
+  text-align: center;
+}
+
+.row{
+    margin-left: 150px;
+}
+body {
+    
+    background-size: cover;
+    background-color: transparent;
+    background-position: center;
+    height: 100vh; /* Ensure full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Center content vertically */
+    
+}
+
+
+
+nav {
+    position: fixed; /* Fixed position */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar appears above other elements */
+}
+
+.navbar-brand {
+    margin-left: 69vh; /* Adjust margin as needed */
+    font-size: 40px;
+    margin-top: 4vh;
+    font-weight: 700;
+    color: rgb(54, 77, 79) !important;
+}
+
+
+
+/* Adjust dropzone styling */
+#dropzone {
+    width: 80%; /* Adjust the width as needed */
+    border: 3px dashed #a8a8a8;
+    border-radius: 10px;
+    background-color: #e8e5e587;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Adjust error message styling */
+#error {
+    color: red;
+    text-align: center;
+}
+#submitBtn{
+    margin-left: 40vh;
+    margin-top: 4vh;
+    font-size: 24px;
+}
